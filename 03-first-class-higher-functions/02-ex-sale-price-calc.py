@@ -44,7 +44,9 @@ print(twenty_percent_off(100))  # Output: 80.0
 print(ten_percent_off(100))  # Output: 90.0
 print(clearance_off(100))  # Output: 50.0
 
-# We can also use the apply_discount function with the created discount functions
+# We can also use the apply_discount function with the created discount functions,
+# but this is something we tried to avoid by creating the factory function,
+# as it adds an extra layer of indirection.
 print(apply_discount(100, twenty_percent_off))  # Output: 80.0
 print(apply_discount(100, ten_percent_off))  # Output: 90.0
 print(apply_discount(100, clearance_off))  # Output: 50.0
